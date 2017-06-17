@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val spin = RotateAnimation(0f, 1000000f, Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f)
 
-        spin.duration = 4000
+        spin.duration = Math.abs(Animation.INFINITE.toLong())
         spin.repeatCount = Animation.INFINITE
         spin.interpolator = LinearOutSlowInInterpolator()
         spin.fillAfter = false
