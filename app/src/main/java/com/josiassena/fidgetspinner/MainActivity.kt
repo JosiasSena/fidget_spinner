@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
-        ivFidget.setOnTouchListener { _, event ->
+        ivFidget.setOnTouchListener { v, event ->
             when (event.action) {
                 KeyEvent.ACTION_DOWN -> {
                     ivFidget.startAnimation(getSpinAnimation())
@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                     stopVibration()
                 }
             }
+
             true
         }
     }
